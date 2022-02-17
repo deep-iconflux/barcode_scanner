@@ -53,10 +53,6 @@ To do that open the Xcode and add camera usage description in `Info.plist`.
 
 After making the changes in Android ans iOS add flutter_barcode_scanner to `pubspec.yaml`
 ```  
-dependencies:
-  ...
-  flutter_barcode_scanner: ^1.0.2
-```
 
 ### One time scan
 1. You need to import the package first.
