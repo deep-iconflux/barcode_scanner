@@ -118,7 +118,7 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         left = (w - AppUtil.dpToPx(getContext(), rectWidth)) / 2;
-        top = (h - AppUtil.dpToPx(getContext(), rectHeight)) / 2;
+        top = (h - AppUtil.dpToPx(getContext(), rectHeight/2)) / 2;
         endY = top;
         super.onSizeChanged(w, h, oldw, oldh);
     }
@@ -162,7 +162,7 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
         eraser.setAntiAlias(true);
         eraser.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
 
-        RectF rect = new RectF(left, top, AppUtil.dpToPx(getContext(), rectWidth) + left, AppUtil.dpToPx(getContext(), rectHeight) + top);
+        RectF rect = new RectF(left, top, AppUtil.dpToPx(getContext(), rectWidth) + left, AppUtil.dpToPx(getContext(), rectHeight/2) + top);
         canvas.drawRoundRect(rect, (float) cornerRadius, (float) cornerRadius, eraser);
 
         // draw horizontal line
@@ -171,7 +171,7 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
         line.setStrokeWidth(Float.valueOf(lineWidth));
 
         // draw the line to product animation
-        if (endY >= top + AppUtil.dpToPx(getContext(), rectHeight) + frames) {
+        if (endY >= top + AppUtil.dpToPx(getContext(), rectHeight/2) + frames) {
             revAnimation = true;
         } else if (endY == top + frames) {
             revAnimation = false;
