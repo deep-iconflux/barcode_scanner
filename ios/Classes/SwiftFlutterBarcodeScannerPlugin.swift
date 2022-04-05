@@ -514,7 +514,7 @@ extension BarcodeScannerViewController{
             self.screenSize = UIScreen.main.bounds
             
             if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
-                self.screenHeight = (CGFloat)((SwiftFlutterBarcodeScannerPlugin.scanMode == ScanMode.QR.index) ? (self.screenSize.width * 0.8) : (self.screenSize.width * 0.5))
+                self.screenHeight = (CGFloat)((SwiftFlutterBarcodeScannerPlugin.scanMode == ScanMode.QR.index) ? (self.screenSize.width * 0.25) : (self.screenSize.width * 0.13))
                 
             } else {
                 self.screenHeight = (CGFloat)((SwiftFlutterBarcodeScannerPlugin.scanMode == ScanMode.QR.index) ? (self.screenSize.height * 0.6) : (self.screenSize.height * 0.5))
