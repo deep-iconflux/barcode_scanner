@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.amolg.flutterbarcodescanner;
+package android.src.main.java.com.amolg.flutterbarcodescanner;
 
 import android.content.Context;
 
